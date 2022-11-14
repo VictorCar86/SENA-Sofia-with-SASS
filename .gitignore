@@ -1,0 +1,3 @@
+src/*.scss
+src/styles/*.scss
+src/styles/**/*.scss
