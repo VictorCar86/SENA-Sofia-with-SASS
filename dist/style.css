@@ -5,6 +5,7 @@
   max-width: 1150px;
   height: 136px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .header-images__logo-img {
@@ -31,7 +32,8 @@
   align-items: center;
   min-height: 40px;
   max-width: 1150px;
-  margin: 0 auto;
+  padding: 0px;
+  margin: 0px auto;
 }
 .navbar-list ul li {
   width: 20%;
@@ -50,9 +52,17 @@
   text-decoration: none;
 }
 
-@media (max-width: 687px) {
+@media (max-width: 740px) {
   .header-images__ads-container {
     display: none;
+  }
+  .navbar-list ul {
+    flex-direction: column;
+  }
+  .navbar-list ul li {
+    width: 100%;
+    padding: 12px 0px;
+    margin-bottom: 4px;
   }
 }
 @media (max-width: 1040px) {
@@ -64,7 +74,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  min-height: 70px;
   padding: 50px 0px 15px;
   border-bottom: 1px solid rgb(234, 234, 234);
 }
@@ -73,6 +83,7 @@
   margin: 0px;
   color: #01A6BD;
   font-size: 2.4rem;
+  text-align: center;
 }
 
 .studies-container__info-container__timeline {
@@ -118,17 +129,98 @@
 
 .studies-container__options-container {
   display: grid;
-  grid-template-columns: minmax(100px, 1fr);
+  grid-template-columns: repeat(5, minmax(80px, 160px));
+  grid-template-rows: 1fr;
+  justify-content: space-evenly;
+  padding: 0px;
+  font-size: 1.4rem;
+  text-align: center;
   list-style: none;
 }
-.studies-container__options-container img {
+.studies-container__options-container a {
+  text-decoration: none;
+  color: #336699;
+}
+.studies-container__options-container a:hover {
+  color: #01A6BD;
+}
+.studies-container__options-container p {
+  margin: 0px;
+  padding-bottom: 14px;
+}
+.studies-container__options-container p:hover {
+  color: #5EB319;
+}
+
+.bubble-icon, .bubble-icon--5, .bubble-icon--4, .bubble-icon--3, .bubble-icon--2, .bubble-icon--1 {
   height: 40px;
   width: 40px;
   padding: 5px;
+  margin: 6px auto 18px;
   border-radius: 9999px;
   background-color: #5EB319;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bubble-icon:hover, .bubble-icon--5:hover, .bubble-icon--4:hover, .bubble-icon--3:hover, .bubble-icon--2:hover, .bubble-icon--1:hover {
+  background-color: #469C00;
 }
 
+.bubble-icon--1 {
+  background-image: url("../src/images/tecnicas.png");
+}
+
+.bubble-icon--2 {
+  background-image: url("../src/images/tecnicavirtual.png");
+}
+
+.bubble-icon--3 {
+  background-image: url("../src/images/cursoscortos.png");
+}
+
+.bubble-icon--4 {
+  background-image: url("../src/images/virtual.png");
+}
+
+.bubble-icon--5 {
+  background-image: url("../src/images/ingles.png");
+}
+
+@media (max-width: 740px) {
+  .studies-container__info-container {
+    padding: 25px 0px;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .studies-container__info-container__timeline {
+    max-width: 368px;
+    min-width: 0px;
+  }
+  .studies-container__info-container__timeline article:nth-child(1) {
+    width: 31%;
+  }
+  .studies-container__info-container__timeline article:nth-child(2) {
+    display: inline-block;
+    width: 59%;
+    float: none;
+  }
+  .studies-container__options-container {
+    grid-template-columns: repeat(5, minmax(65px, 160px));
+    grid-template-rows: 1fr 1fr;
+    margin: 22px auto;
+  }
+  .studies-container__options-container li:nth-child(1), .studies-container__options-container li:nth-child(3) {
+    width: 65%;
+    grid-column: span 2;
+    margin: 0 auto;
+  }
+  .studies-container__options-container li:nth-child(4) {
+    grid-area: 2/2;
+  }
+  .studies-container__options-container li:nth-child(5) {
+    grid-area: 2/4;
+  }
+}
 html {
   font-size: 62.5%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -141,5 +233,6 @@ body {
 
 .main {
   max-width: 1150px;
+  padding: 0px 8px;
   margin: 0px auto;
 }/*# sourceMappingURL=style.css.map */
