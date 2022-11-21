@@ -83,6 +83,60 @@
                 </li>
             </ul>
         </section>
+        <section class="navigator-container">
+            <form class="navigator-container__form" action="#">
+                <p>¿Qué le gustaría estudiar?</p>
+                <span class="navigator-container__form__select-type-study">
+                    Sikas
+                    <ul>
+                        <li>
+                            <label for="st-all">
+                                <input type="radio" name="study-type" id="st-all" checked>
+                                <span>Todos los tipos</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="st-tech">
+                                <input type="radio" name="study-type" id="st-tech">
+                                <span>Carreras técnicas</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="st-course">
+                                <input type="radio" name="study-type" id="st-course">
+                                <span>Cursos cortos</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="st-virtual">
+                                <input type="radio" name="study-type" id="st-virtual">
+                                <span>Formación virtual</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="st-enter">
+                                <input type="radio" name="study-type" id="st-enter">
+                                <span>Formación empresas</span>
+                            </label>
+                        </li>
+                    </ul>
+                </span>
+                <input class="navigator-container__form__studies-text" type="text">
+                <p>¿En donde le gustaría estudiar?</p>
+                <input class="navigator-container__form__cities-text" type="text">
+                <div>
+                    <label for="ac-1">
+                        <input type="radio" name="avaliableCourses" id="ac-1">
+                        <span>Todos los programas</span>
+                    </label>
+                    <label for="ac-2">
+                        <input type="radio" name="avaliableCourses" id="ac-2" checked>
+                        <span>Solo programas con oferta de formación disponible</span>
+                    </label>
+                    <button class="navigator-container__form__button" type="submit">buscar</button>
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
     </footer>
